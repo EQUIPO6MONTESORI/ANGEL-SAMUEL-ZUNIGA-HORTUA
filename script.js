@@ -10,17 +10,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
         elementos.forEach(function(elemento) {
 
-            elemento.innerHTML = elemento.getAttribute("data-" + idioma);
+            // Obtener el texto correspondiente al idioma
+            const texto = elemento.getAttribute("data-" + idioma);
+
+            // Cambiar el contenido del elemento
+            if (texto !== null) {
+                elemento.textContent = texto;
+            }
 
         });
 
-        // Cambiar idioma del documento
+        // Cambiar el idioma de la página
         document.documentElement.lang = idioma;
 
         console.log("Idioma cambiado a: " + idioma);
     }
 
-    // Activar botones
+    // Recorrer los botones
     botones.forEach(function(boton) {
 
         boton.addEventListener("click", function() {
@@ -33,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // Iniciar en español
+    // Idioma inicial: español
     cambiarIdioma("es");
 
 });
