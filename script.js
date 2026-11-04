@@ -1,37 +1,39 @@
 
-// Seleccionar todos los botones de idioma
-const botonesIdioma = document.querySelectorAll(".lang-button");
+document.addEventListener("DOMContentLoaded", function () {
 
-// Seleccionar todos los elementos que tienen traducciones
-const elementosTraducibles = document.querySelectorAll("[data-es][data-en]");
+    const botones = document.querySelectorAll(".lang-button");
 
-// Función para cambiar el idioma
-function cambiarIdioma(idioma) {
+    function cambiarIdioma(idioma) {
 
-    // Cambiar el idioma de toda la página
-    document.documentElement.lang = idioma;
+        // Buscar todos los elementos que tengan traducción
+        const elementos = document.querySelectorAll("[data-es][data-en]");
 
-    // Cambiar los textos
-    elementosTraducibles.forEach(elemento => {
-        elemento.textContent = elemento.getAttribute(`data-${idioma}`);
+        elementos.forEach(function(elemento) {
+
+            elemento.innerHTML = elemento.getAttribute("data-" + idioma);
+
+        });
+
+        // Cambiar idioma del documento
+        document.documentElement.lang = idioma;
+
+        console.log("Idioma cambiado a: " + idioma);
+    }
+
+    // Activar botones
+    botones.forEach(function(boton) {
+
+        boton.addEventListener("click", function() {
+
+            const idioma = boton.getAttribute("data-lang");
+
+            cambiarIdioma(idioma);
+
+        });
+
     });
 
-    // Actualizar el título de la pestaña
-    document.title = idioma === "es"
-        ? "Samuel Zuniga"
-        : "Samuel Zuniga";
-}
+    // Iniciar en español
+    cambiarIdioma("es");
 
-// Detectar cuando se presiona un botón
-botonesIdioma.forEach(boton => {
-    boton.addEventListener("click", () => {
-
-        const idioma = boton.getAttribute("data-lang");
-
-        cambiarIdioma(idioma);
-
-    });
 });
-
-// Idioma inicial
-cambiarIdioma("es");
