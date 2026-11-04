@@ -1,41 +1,100 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Samuel zuniga</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Zuniga</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1 class="title">pagina de samuel</h1>
+        <h1 class="title"
+            data-es="Página de Samuel"
+            data-en="Samuel's Page">
+            Página de Samuel
+        </h1>
 
         <nav>
-            <a href="#">Sobre mi</a>
-            <a href="#">Mi proyecto de vida</a>
-            <a href="#">Mi proyecto de programacion</a>
+            <a href="#about-me"
+               data-es="Sobre mí"
+               data-en="About me">Sobre mí</a>
+
+            <a href="#proyecto-vida"
+               data-es="Mi proyecto de vida"
+               data-en="My life project">Mi proyecto de vida</a>
+
+            <a href="#proyecto-programacion"
+               data-es="Mi proyecto de programación"
+               data-en="My programming project">Mi proyecto de programación</a>
         </nav>
 
         <div class="languages">
-            <button class="lang-button">ES</button>
-            <button class="lang-button">EN</button>
+            <button class="lang-button" data-lang="es">ES</button>
+            <button class="lang-button" data-lang="en">EN</button>
         </div>
     </header>
 
     <main>
-        <section class="section" id="about-me"> 
-            <h2>sobre mi</h2>
-            <p>Yo soy Samuel Tengo 16 y vivo en mi casa me gusta ir al gym con mis amigos me gusta comer pan con agua saborizada despues del gym y jugar roblox con mi computador tambien me gusta caminar siempre y no me gusta levantarme temprano para ir a estudiar ya que es muy aburrido pero si me toca levantarme temprano para ir al gym si me gusta tambien me gusta ver anime como viland saga la cual es una serie de anime muy buena que la verdad me esta gustando y tambien me gusta la serie de ricky y morty por sus aventuras tan divertidas</p>
+        <section class="section" id="about-me">
+            <h2 data-es="Sobre mí"
+                data-en="About me">Sobre mí</h2>
+
+            <p
+                data-es="Yo soy Samuel, tengo 16 años y vivo en mi casa. Me gusta ir al gym con mis amigos. Me gusta comer pan con agua saborizada después del gym y jugar Roblox con mi computador. También me gusta caminar siempre. No me gusta levantarme temprano para ir a estudiar, ya que es muy aburrido, pero sí me gusta levantarme temprano para ir al gym. También me gusta ver anime como Vinland Saga, que es una serie muy buena y que la verdad me está gustando mucho. También me gusta la serie Rick y Morty por sus aventuras tan divertidas."
+                data-en="My name is Samuel, I am 16 years old and I live at home. I like going to the gym with my friends. I enjoy eating bread and drinking flavored water after the gym, and playing Roblox on my computer. I also like going for walks. I don't like waking up early to go to school because it is very boring, but I do enjoy waking up early to go to the gym. I also like watching anime such as Vinland Saga, which is a really good series that I am enjoying. I also like the show Rick and Morty because of its funny adventures.">
+                Yo soy Samuel, tengo 16 años y vivo en mi casa. Me gusta ir al gym con mis amigos. Me gusta comer pan con agua saborizada después del gym y jugar Roblox con mi computador. También me gusta caminar siempre. No me gusta levantarme temprano para ir a estudiar, ya que es muy aburrido, pero sí me gusta levantarme temprano para ir al gym. También me gusta ver anime como Vinland Saga, que es una serie muy buena y que la verdad me está gustando mucho. También me gusta la serie Rick y Morty por sus aventuras tan divertidas.
+            </p>
         </section>
+
         <section id="proyecto-vida" class="section">
-            <h2>Mi Proyecto De Vida </h2>
-            <p>A mi me gustaria ser militar o ser piloto de la fuerza area, ...</p>
+            <h2 data-es="Mi proyecto de vida"
+                data-en="My life project">
+                Mi proyecto de vida
+            </h2>
+
+            <p
+                data-es="A mí me gustaría ser militar o ser piloto de la Fuerza Aérea. Estos son los pasos que quiero seguir para cumplir mi sueño:"
+                data-en="I would like to become a military officer or an Air Force pilot. These are the steps I want to follow to achieve my dream:">
+                A mí me gustaría ser militar o ser piloto de la Fuerza Aérea. Estos son los pasos que quiero seguir para cumplir mi sueño:
+            </p>
+
             <ul>
-                <li>1. Como primer paso, quiero hacer las evaluaciones para ingresar a la milicia, que son exámenes médicos y de aptitud psicofísica, pruebas físicas y pruebas psicotécnicas o psicológicas.</li>
-                <li>2. Después de entrar, comenzaría a estudiar y avanzar en lo académico y físico; me esforzaría hasta terminar los 4 años de milicia.</li>
-                <li>3. Ya al terminar todo, sería teniente de la Fuerza Aérea.</li>
+                <li
+                    data-es="1. Como primer paso, quiero hacer las evaluaciones para ingresar a la milicia, que son exámenes médicos y de aptitud psicofísica, pruebas físicas y pruebas psicotécnicas o psicológicas."
+                    data-en="1. First, I want to take the required evaluations to join the military, including medical and physical fitness exams, physical tests, and psychological or aptitude tests.">
+                    1. Como primer paso, quiero hacer las evaluaciones para ingresar a la milicia, que son exámenes médicos y de aptitud psicofísica, pruebas físicas y pruebas psicotécnicas o psicológicas.
+                </li>
+
+                <li
+                    data-es="2. Después de entrar, comenzaría a estudiar y avanzar en lo académico y físico; me esforzaría hasta terminar los 4 años de milicia."
+                    data-en="2. After joining, I would begin studying and improving academically and physically. I would work hard until completing the four years of military training.">
+                    2. Después de entrar, comenzaría a estudiar y avanzar en lo académico y físico; me esforzaría hasta terminar los 4 años de milicia.
+                </li>
+
+                <li
+                    data-es="3. Ya al terminar todo, sería teniente de la Fuerza Aérea."
+                    data-en="3. After completing everything, I would become a lieutenant in the Air Force.">
+                    3. Ya al terminar todo, sería teniente de la Fuerza Aérea.
+                </li>
             </ul>
         </section>
+
+        <section id="proyecto-programacion" class="section">
+            <h2 data-es="Mi proyecto de programación"
+                data-en="My programming project">
+                Mi proyecto de programación
+            </h2>
+
+            <p
+                data-es="Aquí presentaré mi proyecto de programación y las cosas que he aprendido."
+                data-en="Here I will present my programming project and the things I have learned.">
+                Aquí presentaré mi proyecto de programación y las cosas que he aprendido.
+            </p>
+        </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
