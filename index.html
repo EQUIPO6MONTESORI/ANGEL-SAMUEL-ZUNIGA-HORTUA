@@ -4,97 +4,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel Zuniga</title>
+
+    <title>Samuel Zúñiga | Mi página personal</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1 class="title"
-            data-es="Página de Samuel"
-            data-en="Samuel's Page">
-            Página de Samuel
-        </h1>
 
-        <nav>
-            <a href="#about-me"
-               data-es="Sobre mí"
-               data-en="About me">Sobre mí</a>
+    <header class="header">
+        <div class="container header-content">
 
-            <a href="#proyecto-vida"
-               data-es="Mi proyecto de vida"
-               data-en="My life project">Mi proyecto de vida</a>
+            <h1 class="title"
+                data-es="SAMUEL ZÚÑIGA"
+                data-en="SAMUEL ZUNIGA">
+                SAMUEL ZÚÑIGA
+            </h1>
 
-            <a href="#proyecto-programacion"
-               data-es="Mi proyecto de programación"
-               data-en="My programming project">Mi proyecto de programación</a>
-        </nav>
+            <nav class="navbar">
+                <a href="#about-me"
+                   data-es="Sobre mí"
+                   data-en="About me">Sobre mí</a>
 
-        <div class="languages">
-            <button class="lang-button" data-lang="es">ES</button>
-            <button class="lang-button" data-lang="en">EN</button>
+                <a href="#proyecto-vida"
+                   data-es="Mi proyecto de vida"
+                   data-en="My life project">Mi proyecto de vida</a>
+
+                <a href="#proyecto-programacion"
+                   data-es="Programación"
+                   data-en="Programming">Programación</a>
+            </nav>
+
+            <div class="languages">
+                <button class="lang-button active"
+                        data-lang="es"
+                        aria-label="Cambiar a español">
+                    ES
+                </button>
+
+                <button class="lang-button"
+                        data-lang="en"
+                        aria-label="Change to English">
+                    EN
+                </button>
+            </div>
+
         </div>
     </header>
 
-    <main>
+    <main class="container">
+
+        <!-- PRESENTACIÓN -->
+        <section class="hero">
+            <p class="hero-subtitle"
+               data-es="BIENVENIDO A MI ESPACIO PERSONAL"
+               data-en="WELCOME TO MY PERSONAL SPACE">
+                BIENVENIDO A MI ESPACIO PERSONAL
+            </p>
+
+            <h2 data-es="Hola, soy Samuel."
+                data-en="Hello, I'm Samuel.">
+                Hola, soy Samuel.
+            </h2>
+
+            <p data-es="Conoce mis gustos, mis sueños y mis proyectos."
+               data-en="Discover my interests, dreams and projects.">
+                Conoce mis gustos, mis sueños y mis proyectos.
+            </p>
+
+            <a href="#about-me"
+               class="hero-button"
+               data-es="Conóceme"
+               data-en="Get to know me">
+                Conóceme
+            </a>
+        </section>
+
+        <!-- SOBRE MÍ -->
         <section class="section" id="about-me">
-            <h2 data-es="Sobre mí"
-                data-en="About me">Sobre mí</h2>
 
-            <p
-                data-es="Yo soy Samuel, tengo 16 años y vivo en mi casa. Me gusta ir al gym con mis amigos. Me gusta comer pan con agua saborizada después del gym y jugar Roblox con mi computador. También me gusta caminar siempre. No me gusta levantarme temprano para ir a estudiar, ya que es muy aburrido, pero sí me gusta levantarme temprano para ir al gym. También me gusta ver anime como Vinland Saga, que es una serie muy buena y que la verdad me está gustando mucho. También me gusta la serie Rick y Morty por sus aventuras tan divertidas."
-                data-en="My name is Samuel, I am 16 years old and I live at home. I like going to the gym with my friends. I enjoy eating bread and drinking flavored water after the gym, and playing Roblox on my computer. I also like going for walks. I don't like waking up early to go to school because it is very boring, but I do enjoy waking up early to go to the gym. I also like watching anime such as Vinland Saga, which is a really good series that I am enjoying. I also like the show Rick and Morty because of its funny adventures.">
-                Yo soy Samuel, tengo 16 años y vivo en mi casa. Me gusta ir al gym con mis amigos. Me gusta comer pan con agua saborizada después del gym y jugar Roblox con mi computador. También me gusta caminar siempre. No me gusta levantarme temprano para ir a estudiar, ya que es muy aburrido, pero sí me gusta levantarme temprano para ir al gym. También me gusta ver anime como Vinland Saga, que es una serie muy buena y que la verdad me está gustando mucho. También me gusta la serie Rick y Morty por sus aventuras tan divertidas.
-            </p>
+            <div class="section-title">
+                <span>01</span>
+                <h2 data-es="Sobre mí"
+                    data-en="About me">
+                    Sobre mí
+                </h2>
+            </div>
+
+            <div class="card">
+                <p
+                    data-es="Yo soy Samuel, tengo 16 años y vivo en mi casa. Me gusta ir al gym con mis amigos. Me gusta comer pan con agua saborizada después del gym y jugar Roblox con mi computador. También me gusta caminar siempre. No me gusta levantarme temprano para ir a estudiar, ya que es muy aburrido, pero sí me gusta levantarme temprano para ir al gym. También me gusta ver anime como Vinland Saga, que es una serie muy buena y que la verdad me está gustando mucho. También me gusta la serie Rick y Morty por sus aventuras tan divertidas."
+
+                    data-en="My name is Samuel, I am 16 years old and I live at home. I like going to the gym with my friends. I enjoy eating bread and drinking flavored water after the gym, and playing Roblox on my computer. I also like going for walks. I don't like waking up early to go to school because it is very boring, but I do enjoy waking up early to go to the gym. I also like watching anime such as Vinland Saga, which is a really good series that I am enjoying. I also like the show Rick and Morty because of its funny adventures.">
+
+                    Yo soy Samuel, tengo 16 años y vivo en mi casa. Me gusta ir al gym con mis amigos. Me gusta comer pan con agua saborizada después del gym y jugar Roblox con mi computador. También me gusta caminar siempre. No me gusta levantarme temprano para ir a estudiar, ya que es muy aburrido, pero sí me gusta levantarme temprano para ir al gym. También me gusta ver anime como Vinland Saga, que es una serie muy buena y que la verdad me está gustando mucho. También me gusta la serie Rick y Morty por sus aventuras tan divertidas.
+
+                </p>
+            </div>
+
         </section>
 
-        <section id="proyecto-vida" class="section">
-            <h2 data-es="Mi proyecto de vida"
-                data-en="My life project">
-                Mi proyecto de vida
-            </h2>
+        <!-- PROYECTO DE VIDA -->
+        <section class="section" id="proyecto-vida">
 
-            <p
-                data-es="A mí me gustaría ser militar o ser piloto de la Fuerza Aérea. Estos son los pasos que quiero seguir para cumplir mi sueño:"
-                data-en="I would like to become a military officer or an Air Force pilot. These are the steps I want to follow to achieve my dream:">
-                A mí me gustaría ser militar o ser piloto de la Fuerza Aérea. Estos son los pasos que quiero seguir para cumplir mi sueño:
-            </p>
+            <div class="section-title">
+                <span>02</span>
+                <h2 data-es="Mi proyecto de vida"
+                    data-en="My life project">
+                    Mi proyecto de vida
+                </h2>
+            </div>
 
-            <ul>
-                <li
-                    data-es="1. Como primer paso, quiero hacer las evaluaciones para ingresar a la milicia, que son exámenes médicos y de aptitud psicofísica, pruebas físicas y pruebas psicotécnicas o psicológicas."
-                    data-en="1. First, I want to take the required evaluations to join the military, including medical and physical fitness exams, physical tests, and psychological or aptitude tests.">
-                    1. Como primer paso, quiero hacer las evaluaciones para ingresar a la milicia, que son exámenes médicos y de aptitud psicofísica, pruebas físicas y pruebas psicotécnicas o psicológicas.
-                </li>
+            <div class="card">
 
-                <li
-                    data-es="2. Después de entrar, comenzaría a estudiar y avanzar en lo académico y físico; me esforzaría hasta terminar los 4 años de milicia."
-                    data-en="2. After joining, I would begin studying and improving academically and physically. I would work hard until completing the four years of military training.">
-                    2. Después de entrar, comenzaría a estudiar y avanzar en lo académico y físico; me esforzaría hasta terminar los 4 años de milicia.
-                </li>
+                <p
+                    data-es="A mí me gustaría ser militar o ser piloto de la Fuerza Aérea. Estos son los pasos que quiero seguir para cumplir mi sueño:"
 
-                <li
-                    data-es="3. Ya al terminar todo, sería teniente de la Fuerza Aérea."
-                    data-en="3. After completing everything, I would become a lieutenant in the Air Force.">
-                    3. Ya al terminar todo, sería teniente de la Fuerza Aérea.
-                </li>
-            </ul>
+                    data-en="I would like to become a military officer or an Air Force pilot. These are the steps I want to follow to achieve my dream:">
+
+                    A mí me gustaría ser militar o ser piloto de la Fuerza Aérea. Estos son los pasos que quiero seguir para cumplir mi sueño:
+
+                </p>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <span class="number">01</span>
+
+                        <p
+                            data-es="Como primer paso, quiero hacer las evaluaciones para ingresar a la milicia, que son exámenes médicos y de aptitud psicofísica, pruebas físicas y pruebas psicotécnicas o psicológicas."
+
+                            data-en="First, I want to take the required evaluations to join the military, including medical and physical fitness exams, physical tests, and psychological or aptitude tests.">
+
+                            Como primer paso, quiero hacer las evaluaciones para ingresar a la milicia, que son exámenes médicos y de aptitud psicofísica, pruebas físicas y pruebas psicotécnicas o psicológicas.
+
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="number">02</span>
+
+                        <p
+                            data-es="Después de entrar, comenzaría a estudiar y avanzar en lo académico y físico; me esforzaría hasta terminar los 4 años de milicia."
+
+                            data-en="After joining, I would begin studying and improving academically and physically. I would work hard until completing the four years of military training.">
+
+                            Después de entrar, comenzaría a estudiar y avanzar en lo académico y físico; me esforzaría hasta terminar los 4 años de milicia.
+
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="number">03</span>
+
+                        <p
+                            data-es="Ya al terminar todo, sería teniente de la Fuerza Aérea."
+
+                            data-en="After completing everything, I would become a lieutenant in the Air Force.">
+
+                            Ya al terminar todo, sería teniente de la Fuerza Aérea.
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
-        <section id="proyecto-programacion" class="section">
-            <h2 data-es="Mi proyecto de programación"
-                data-en="My programming project">
-                Mi proyecto de programación
-            </h2>
+        <!-- PROYECTO DE PROGRAMACIÓN -->
+        <section class="section" id="proyecto-programacion">
 
-            <p
-                data-es="Aquí presentaré mi proyecto de programación y las cosas que he aprendido."
-                data-en="Here I will present my programming project and the things I have learned.">
-                Aquí presentaré mi proyecto de programación y las cosas que he aprendido.
-            </p>
+            <div class="section-title">
+                <span>03</span>
+                <h2 data-es="Mi proyecto de programación"
+                    data-en="My programming project">
+                    Mi proyecto de programación
+                </h2>
+            </div>
+
+            <div class="card">
+
+                <p
+                    data-es="Aquí presentaré mi proyecto de programación y las cosas que he aprendido."
+
+                    data-en="Here I will present my programming project and the things I have learned.">
+
+                    Aquí presentaré mi proyecto de programación y las cosas que he aprendido.
+
+                </p>
+
+                <div class="code-decoration">
+                    <span>&lt;</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                    <span>/&gt;</span>
+                </div>
+
+            </div>
+
         </section>
+
     </main>
 
+    <footer class="footer">
+        <p data-es="Diseñado por Samuel Zúñiga | 2026"
+           data-en="Designed by Samuel Zuniga | 2026">
+            Diseñado por Samuel Zúñiga | 2026
+        </p>
+    </footer>
+
     <script src="script.js" defer></script>
+
 </body>
 </html>
