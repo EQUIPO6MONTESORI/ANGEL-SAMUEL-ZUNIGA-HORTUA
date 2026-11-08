@@ -1,45 +1,57 @@
 
-document.addEventListener("DOMContentLoaded", function () {
+// Seleccionar todos los botones de idioma
+const languageButtons = document.querySelectorAll(".lang-button");
 
-    const botones = document.querySelectorAll(".lang-button");
+// Seleccionar todos los elementos que tienen traducciones
+const translatableElements = document.querySelectorAll("[data-es][data-en]");
 
-    function cambiarIdioma(idioma) {
+// Función para cambiar el idioma
+function changeLanguage(language) {
 
-        // Buscar todos los elementos que tengan traducción
-        const elementos = document.querySelectorAll("[data-es][data-en]");
+    // Cambiar el idioma de la página
+    document.documentElement.lang = language;
 
-        elementos.forEach(function(elemento) {
+    // Recorrer todos los elementos traducibles
+    translatableElements.forEach(element => {
 
-            // Obtener el texto correspondiente al idioma
-            const texto = elemento.getAttribute("data-" + idioma);
+        // Obtener el texto correspondiente al idioma seleccionado
+        const translatedText = element.getAttribute(`data-${language}`);
 
-            // Cambiar el contenido del elemento
-            if (texto !== null) {
-                elemento.textContent = texto;
-            }
-
-        });
-
-        // Cambiar el idioma de la página
-        document.documentElement.lang = idioma;
-
-        console.log("Idioma cambiado a: " + idioma);
-    }
-
-    // Recorrer los botones
-    botones.forEach(function(boton) {
-
-        boton.addEventListener("click", function() {
-
-            const idioma = boton.getAttribute("data-lang");
-
-            cambiarIdioma(idioma);
-
-        });
+        // Actualizar el contenido del elemento
+        element.textContent = translatedText;
 
     });
 
-    // Idioma inicial: español
-    cambiarIdioma("es");
+    // Actualizar el botón activo
+    languageButtons.forEach(button => {
+
+        button.classList.remove("active");
+
+        if (button.dataset.lang === language) {
+            button.classList.add("active");
+        }
+
+    });
+
+    // Guardar el idioma seleccionado
+    localStorage.setItem("selectedLanguage", language);
+}
+
+// Agregar funcionamiento a los botones
+languageButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const selectedLanguage = button.dataset.lang;
+
+        changeLanguage(selectedLanguage);
+
+    });
 
 });
+
+// Recuperar el idioma guardado
+const savedLanguage = localStorage.getItem("selectedLanguage") || "es";
+
+// Aplicar el idioma inicial
+changeLanguage(savedLanguage);
